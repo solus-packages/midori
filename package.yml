@@ -1,0 +1,29 @@
+name        : midori
+version     : 0.5.10
+release     : 2
+source     :
+    - http://midori-browser.org/downloads/midori_0.5.10_all_.tar.bz2 : 702344f68d7f034866a46398e35b3c16a5a5f3e431a5d916ea5efc3eaaa3e46f
+license     : GPL-2.0+
+summary     : Lightweight web browser GTK+ based
+rundeps     :
+    - glib-networking
+builddeps   :
+    - vala
+    - pkgconfig(sqlite3)
+    - pkgconfig(libsoup-gnome-2.4)
+    - pkgconfig(gcr-3)
+    - pkgconfig(granite)
+    - pkgconfig(webkitgtk-3.0)
+    - pkgconfig(librsvg-2.0)
+description : |
+    Midori is a lightweight GTK+ web browser based on WebkitGtk. It features tabs, windows and session management, bookmarks stored with XBEL, searchbox based on OpenSearch, and user script support
+clang      : no
+setup      : |
+    ./configure --prefix=/usr \
+                --disable-zeitgeist \
+                --enable-gtk3 \
+                --enable-granite
+build      : |
+    %make
+install    : |
+    %make_install
