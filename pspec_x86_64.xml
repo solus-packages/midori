@@ -2,8 +2,8 @@
     <Source>
         <Name>midori</Name>
         <Packager>
-            <Name>Justin Zobel</Name>
-            <Email>justin@solus-project.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Packager>
         <License>GPL-2.0+</License>
         <Summary xml:lang="en">Lightweight web browser GTK+ based</Summary>
@@ -16,19 +16,20 @@
         <Summary xml:lang="en">Lightweight web browser GTK+ based</Summary>
         <Description xml:lang="en">Midori is a lightweight GTK+ web browser based on WebkitGtk. It features tabs, windows and session management, bookmarks stored with XBEL, searchbox based on OpenSearch, and user script support
 </Description>
+        <PartOf>network.web.browser</PartOf>
         <RuntimeDependencies>
             <Dependency>glib-networking</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="data">/usr/share/appdata</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="data">/usr/share/midori</Path>
             <Path fileType="library">/usr/lib64/lib*.so.*</Path>
             <Path fileType="library">/usr/lib64/midori</Path>
+            <Path fileType="data">/usr/share/appdata</Path>
+            <Path fileType="data">/usr/share/midori</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications</Path>
             <Path fileType="config">/etc/xdg/midori</Path>
         </Files>
     </Package>
@@ -46,12 +47,12 @@
         </Files>
     </Package>
     <History>
-        <Update release="4">
-            <Date>2015-09-09</Date>
+        <Update release="5">
+            <Date>2015-10-31</Date>
             <Version>0.5.11</Version>
             <Comment>Packaging update</Comment>
-            <Name>Justin Zobel</Name>
-            <Email>justin@solus-project.com</Email>
+            <Name>Ikey Doherty</Name>
+            <Email>ikey@solus-project.com</Email>
         </Update>
     </History>
 </PISI>
