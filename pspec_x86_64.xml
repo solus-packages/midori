@@ -2,10 +2,11 @@
     <Source>
         <Name>midori</Name>
         <Packager>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Packager>
-        <License>GPL-2.0+</License>
+        <License>GPL-2.0</License>
+        <PartOf>network.web.browser</PartOf>
         <Summary xml:lang="en">Lightweight web browser GTK+ based</Summary>
         <Description xml:lang="en">Midori is a lightweight GTK+ web browser based on WebkitGtk. It features tabs, windows and session management, bookmarks stored with XBEL, searchbox based on OpenSearch, and user script support
 </Description>
@@ -17,20 +18,59 @@
         <Description xml:lang="en">Midori is a lightweight GTK+ web browser based on WebkitGtk. It features tabs, windows and session management, bookmarks stored with XBEL, searchbox based on OpenSearch, and user script support
 </Description>
         <PartOf>network.web.browser</PartOf>
-        <RuntimeDependencies>
-            <Dependency>glib-networking</Dependency>
-        </RuntimeDependencies>
         <Files>
+            <Path fileType="config">/etc/xdg/midori/extensions/adblock/config</Path>
+            <Path fileType="config">/etc/xdg/midori/search</Path>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="library">/usr/lib64/lib*.so.*</Path>
-            <Path fileType="library">/usr/lib64/midori</Path>
-            <Path fileType="data">/usr/share/appdata</Path>
-            <Path fileType="data">/usr/share/midori</Path>
-            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="library">/usr/lib64/midori/libabout.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libadblock.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libaddons.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libapps.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libcolorful-tabs.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libcookie-manager.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libcookie-permissions.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libcopy-tabs.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libdelayed-load.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libdevpet.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libdomain-keys.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libexternal-download-manager.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libfeed-panel.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libflummi.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libformhistory.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libhistory-list.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libmouse-gestures.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libnojs.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libnotes.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libnsplugin-manager.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libopen-with.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libshortcuts.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libstatus-clock.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libstatusbar-features.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libtab-panel.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libtabby.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libtabs-minimized.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libtoolbar-editor.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libtransfers.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libwebmedia-now-playing.so</Path>
+            <Path fileType="data">/usr/share/appdata/midori.appdata.xml</Path>
+            <Path fileType="data">/usr/share/applications/midori-private.desktop</Path>
+            <Path fileType="data">/usr/share/applications/midori.desktop</Path>
             <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="config">/etc/xdg/midori</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/midori.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/16x16/categories/extension.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/16x16/status/internet-news-reader.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/22x22/apps/midori.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/22x22/categories/extension.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/22x22/status/internet-news-reader.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/24x24/status/adblock-blocked.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/24x24/status/adblock-disabled.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/24x24/status/adblock-enabled.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/midori.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/categories/extension.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/internet-news-reader.svg</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/midori</Path>
         </Files>
     </Package>
     <Package>
@@ -40,19 +80,19 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="current">midori</Dependency>
+            <Dependency release="7">midori</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/lib*.so</Path>
         </Files>
     </Package>
     <History>
-        <Update release="5">
-            <Date>2015-10-31</Date>
+        <Update release="7">
+            <Date>2017-05-19</Date>
             <Version>0.5.11</Version>
             <Comment>Packaging update</Comment>
-            <Name>Ikey Doherty</Name>
-            <Email>ikey@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Update>
     </History>
 </PISI>

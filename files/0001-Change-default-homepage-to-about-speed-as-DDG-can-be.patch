@@ -1,0 +1,125 @@
+From 110a0e32d11df255d40af9bdebba32cc6e8e0c5f Mon Sep 17 00:00:00 2001
+From: Joshua Strobl <joshua@stroblindustries.com>
+Date: Fri, 19 May 2017 13:49:22 +0300
+Subject: [PATCH 1/1] Change default homepage to about:speed, as DDG can be
+ blocked in certain locations. Changed maximize to not hide the titlebar,
+ can't unmaximize otherwise. Ensure buildable against newer Vala.
+
+---
+ extensions/adblock/widgets.vala | 2 +-
+ extensions/apps.vala            | 2 +-
+ extensions/history-list.vala    | 2 +-
+ extensions/notes.vala           | 2 +-
+ extensions/transfers.vala       | 2 +-
+ midori/midori-settings.vala     | 2 +-
+ midori/midori-view.c            | 2 +-
+ midori/midori-window.vala       | 2 +-
+ 8 files changed, 8 insertions(+), 8 deletions(-)
+
+diff --git a/extensions/adblock/widgets.vala b/extensions/adblock/widgets.vala
+index 757d35b..45880df 100644
+--- a/extensions/adblock/widgets.vala
++++ b/extensions/adblock/widgets.vala
+@@ -227,7 +227,7 @@ namespace Adblock {
+                             liststore.get (iter, 0, out sub);
+                             if (sub.mutable) {
+                                 config.remove (sub);
+-                                liststore.remove (iter);
++                                liststore.remove (ref iter);
+                                 return true;
+                             }
+                         }
+diff --git a/extensions/apps.vala b/extensions/apps.vala
+index 16e2286..f81d351 100644
+--- a/extensions/apps.vala
++++ b/extensions/apps.vala
+@@ -265,7 +265,7 @@ namespace Apps {
+                             store.get (iter, 0, out launcher);
+                             try {
+                                 launcher.file.trash (null);
+-                                store.remove (iter);
++                                store.remove (ref iter);
+ 
+                                 string filename = Midori.Download.clean_filename (launcher.name);
+ #if HAVE_WIN32
+diff --git a/extensions/history-list.vala b/extensions/history-list.vala
+index db71927..23d8263 100644
+--- a/extensions/history-list.vala
++++ b/extensions/history-list.vala
+@@ -223,7 +223,7 @@ namespace HistoryList {
+                     FixMe: the retrun value of `Gtk.ListStore.remove` should be checked
+                     Note:  in some cases the return value of `Gtk.ListStore.remove` is wrong
+                 */
+-                model.remove (iter);
++                model.remove (ref iter);
+                 this.browser.close_tab (view);
+                 if (length > 2)
+                     this.resize_treeview ();
+diff --git a/extensions/notes.vala b/extensions/notes.vala
+index f0ccfe6..c8d4c4a 100644
+--- a/extensions/notes.vala
++++ b/extensions/notes.vala
+@@ -116,7 +116,7 @@ namespace ClipNotes {
+                     if (current_note == note) {
+                         current_note = null;
+                     }
+-                    notes_list_store.remove (iter);
++                    notes_list_store.remove (ref iter);
+                     break;
+                 }
+             } while (notes_list_store.iter_next (ref iter));
+diff --git a/extensions/transfers.vala b/extensions/transfers.vala
+index e685589..f7f637f 100644
+--- a/extensions/transfers.vala
++++ b/extensions/transfers.vala
+@@ -275,7 +275,7 @@ namespace Transfers {
+                     Transfer found;
+                     store.get (iter, 0, out found);
+                     if (transfer == found) {
+-                        store.remove (iter);
++                        store.remove (ref iter);
+                         break;
+                     }
+                 } while (store.iter_next (ref iter));
+diff --git a/midori/midori-settings.vala b/midori/midori-settings.vala
+index 387aafa..73b34d7 100644
+--- a/midori/midori-settings.vala
++++ b/midori/midori-settings.vala
+@@ -156,7 +156,7 @@ namespace Midori {
+         // [Deprecated (since = "0.5.7")]
+         public bool always_show_tabbar { get; set; default = true; }
+ 
+-        public string homepage { get; set; default = "about:search"; }
++        public string homepage { get; set; default = "about:dial"; }
+         public string tabhome { get; set; default = "about:dial"; }
+         static string default_download_folder () {
+             return Environment.get_user_special_dir (UserDirectory.DOWNLOAD)
+diff --git a/midori/midori-view.c b/midori/midori-view.c
+index fbcb01c..8562120 100644
+--- a/midori/midori-view.c
++++ b/midori/midori-view.c
+@@ -3496,7 +3496,7 @@ midori_view_web_inspector_construct_window (gpointer       inspector,
+     else
+         gtk_window_set_icon_name (GTK_WINDOW (window), icon_name);
+     #if GTK_CHECK_VERSION (3, 4, 0)
+-    gtk_window_set_hide_titlebar_when_maximized (GTK_WINDOW (window), TRUE);
++    gtk_window_set_hide_titlebar_when_maximized (GTK_WINDOW (window), FALSE);
+     #endif
+     gtk_widget_set_size_request (GTK_WIDGET (inspector_view), 700, 100);
+     #if GTK_CHECK_VERSION (3, 0, 0)
+diff --git a/midori/midori-window.vala b/midori/midori-window.vala
+index b1a5659..c089d3e 100644
+--- a/midori/midori-window.vala
++++ b/midori/midori-window.vala
+@@ -28,7 +28,7 @@ namespace Midori {
+                 toolbar.show_arrow = true;
+ #if HAVE_GTK3
+                 toolbar.get_style_context ().add_class ("primary-toolbar");
+-                hide_titlebar_when_maximized = true;
++                hide_titlebar_when_maximized = false;
+ #endif
+                 toolbar.popup_context_menu.connect ((x, y, button) => {
+                     return button == 3 && context_menu (toolbar); });
+-- 
+2.13.0
+
