@@ -80,15 +80,15 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="7">midori</Dependency>
+            <Dependency release="8">midori</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/lib*.so</Path>
         </Files>
     </Package>
     <History>
-        <Update release="7">
-            <Date>2017-05-19</Date>
+        <Update release="8">
+            <Date>2017-10-08</Date>
             <Version>0.5.11</Version>
             <Comment>Packaging update</Comment>
             <Name>Joshua Strobl</Name>
