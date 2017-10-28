@@ -195,6 +195,7 @@ libmidori-core.so.1:midori_context_action_add_simple
 libmidori-core.so.1:midori_context_action_construct
 libmidori-core.so.1:midori_context_action_construct_escaped
 libmidori-core.so.1:midori_context_action_create_menu
+libmidori-core.so.1:midori_context_action_create_webkit_context_menu
 libmidori-core.so.1:midori_context_action_get_by_name
 libmidori-core.so.1:midori_context_action_get_type
 libmidori-core.so.1:midori_context_action_new
@@ -241,6 +242,7 @@ libmidori-core.so.1:midori_download_fallback_extension
 libmidori-core.so.1:midori_download_get_basename_for_display
 libmidori-core.so.1:midori_download_get_content_type
 libmidori-core.so.1:midori_download_get_extension_for_uri
+libmidori-core.so.1:midori_download_get_filename
 libmidori-core.so.1:midori_download_get_filename_suggestion_for_uri
 libmidori-core.so.1:midori_download_get_progress
 libmidori-core.so.1:midori_download_get_suggested_filename
@@ -251,6 +253,7 @@ libmidori-core.so.1:midori_download_has_wrong_checksum
 libmidori-core.so.1:midori_download_is_finished
 libmidori-core.so.1:midori_download_open
 libmidori-core.so.1:midori_download_prepare_destination_uri
+libmidori-core.so.1:midori_download_set_filename
 libmidori-core.so.1:midori_download_set_type
 libmidori-core.so.1:midori_dummy_viewable_get_type
 libmidori-core.so.1:midori_dummy_viewable_new
@@ -326,21 +329,6 @@ libmidori-core.so.1:midori_history_website_get_type
 libmidori-core.so.1:midori_history_website_get_uri
 libmidori-core.so.1:midori_history_website_new
 libmidori-core.so.1:midori_history_website_set_uri
-libmidori-core.so.1:midori_hsts_construct
-libmidori-core.so.1:midori_hsts_directive_construct
-libmidori-core.so.1:midori_hsts_directive_construct_from_header
-libmidori-core.so.1:midori_hsts_directive_get_type
-libmidori-core.so.1:midori_hsts_directive_is_valid
-libmidori-core.so.1:midori_hsts_directive_new
-libmidori-core.so.1:midori_hsts_directive_new_from_header
-libmidori-core.so.1:midori_hsts_directive_ref
-libmidori-core.so.1:midori_hsts_directive_unref
-libmidori-core.so.1:midori_hsts_get_type
-libmidori-core.so.1:midori_hsts_new
-libmidori-core.so.1:midori_hsts_param_spec_directive
-libmidori-core.so.1:midori_hsts_value_get_directive
-libmidori-core.so.1:midori_hsts_value_set_directive
-libmidori-core.so.1:midori_hsts_value_take_directive
 libmidori-core.so.1:midori_identity_get_type
 libmidori-core.so.1:midori_load_error_get_type
 libmidori-core.so.1:midori_load_extensions
@@ -360,8 +348,6 @@ libmidori-core.so.1:midori_location_action_set_secondary_icon
 libmidori-core.so.1:midori_location_action_set_security_hint
 libmidori-core.so.1:midori_location_action_set_text
 libmidori-core.so.1:midori_location_action_tls_flags_to_string
-libmidori-core.so.1:midori_map_add_message
-libmidori-core.so.1:midori_map_get_message
 libmidori-core.so.1:midori_new_page_get_type
 libmidori-core.so.1:midori_new_view_get_type
 libmidori-core.so.1:midori_newtab_get_type
@@ -488,10 +474,9 @@ libmidori-core.so.1:midori_settings_get_clear_private_data
 libmidori-core.so.1:midori_settings_get_close_buttons_on_tabs
 libmidori-core.so.1:midori_settings_get_compact_sidepanel
 libmidori-core.so.1:midori_settings_get_custom_title
-libmidori-core.so.1:midori_settings_get_default_charset
 libmidori-core.so.1:midori_settings_get_default_theme_name
 libmidori-core.so.1:midori_settings_get_download_folder
-libmidori-core.so.1:midori_settings_get_enable_javascript
+libmidori-core.so.1:midori_settings_get_enable_spell_checking
 libmidori-core.so.1:midori_settings_get_find_while_typing
 libmidori-core.so.1:midori_settings_get_first_party_cookies_only
 libmidori-core.so.1:midori_settings_get_flash_window_on_new_bg_tabs
@@ -544,9 +529,8 @@ libmidori-core.so.1:midori_settings_set_clear_private_data
 libmidori-core.so.1:midori_settings_set_close_buttons_on_tabs
 libmidori-core.so.1:midori_settings_set_compact_sidepanel
 libmidori-core.so.1:midori_settings_set_custom_title
-libmidori-core.so.1:midori_settings_set_default_charset
 libmidori-core.so.1:midori_settings_set_download_folder
-libmidori-core.so.1:midori_settings_set_enable_javascript
+libmidori-core.so.1:midori_settings_set_enable_spell_checking
 libmidori-core.so.1:midori_settings_set_find_while_typing
 libmidori-core.so.1:midori_settings_set_first_party_cookies_only
 libmidori-core.so.1:midori_settings_set_flash_window_on_new_bg_tabs
@@ -784,7 +768,6 @@ libmidori-core.so.1:midori_viewable_get_toolbar
 libmidori-core.so.1:midori_viewable_get_type
 libmidori-core.so.1:midori_web_app_new
 libmidori-core.so.1:midori_web_settings_add_style
-libmidori-core.so.1:midori_web_settings_get_accept_language
 libmidori-core.so.1:midori_web_settings_get_site_data_policy
 libmidori-core.so.1:midori_web_settings_get_system_name
 libmidori-core.so.1:midori_web_settings_get_type
