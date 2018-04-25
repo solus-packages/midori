@@ -2,10 +2,10 @@
     <Source>
         <Name>midori</Name>
         <Packager>
-            <Name>Peter O&apos;Connor</Name>
-            <Email>peter@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Packager>
-        <License>GPL-2.0</License>
+        <License>GPL-2.0-only</License>
         <PartOf>network.web.browser</PartOf>
         <Summary xml:lang="en">Lightweight web browser GTK+ based</Summary>
         <Description xml:lang="en">Midori is a lightweight GTK+ web browser based on WebkitGtk. It features tabs, windows and session management, bookmarks stored with XBEL, searchbox based on OpenSearch, and user script support
@@ -74,19 +74,19 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="12">midori</Dependency>
+            <Dependency release="13">midori</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib64/lib*.so</Path>
         </Files>
     </Package>
     <History>
-        <Update release="12">
-            <Date>2018-04-14</Date>
+        <Update release="13">
+            <Date>2018-04-25</Date>
             <Version>0.5.11</Version>
             <Comment>Packaging update</Comment>
-            <Name>Peter O&apos;Connor</Name>
-            <Email>peter@solus-project.com</Email>
+            <Name>Joshua Strobl</Name>
+            <Email>joshua@stroblindustries.com</Email>
         </Update>
     </History>
 </PISI>
