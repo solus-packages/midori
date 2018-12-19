@@ -5,75 +5,51 @@
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>
         </Packager>
-        <License>GPL-2.0-only</License>
+        <License>LGPL-2.1-or-later</License>
         <PartOf>network.web.browser</PartOf>
-        <Summary xml:lang="en">Lightweight web browser GTK+ based</Summary>
+        <Summary xml:lang="en">Midori Web Browser - a lightweight, fast and free web browser using WebKit and GTK+</Summary>
         <Description xml:lang="en">Midori is a lightweight GTK+ web browser based on WebkitGtk. It features tabs, windows and session management, bookmarks stored with XBEL, searchbox based on OpenSearch, and user script support
 </Description>
         <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>midori</Name>
-        <Summary xml:lang="en">Lightweight web browser GTK+ based</Summary>
+        <Summary xml:lang="en">Midori Web Browser - a lightweight, fast and free web browser using WebKit and GTK+</Summary>
         <Description xml:lang="en">Midori is a lightweight GTK+ web browser based on WebkitGtk. It features tabs, windows and session management, bookmarks stored with XBEL, searchbox based on OpenSearch, and user script support
 </Description>
         <PartOf>network.web.browser</PartOf>
         <Files>
-            <Path fileType="config">/etc/xdg/midori/extensions/adblock/config</Path>
-            <Path fileType="config">/etc/xdg/midori/search</Path>
             <Path fileType="executable">/usr/bin/midori</Path>
-            <Path fileType="library">/usr/lib64/libmidori-core.so.0.0.0</Path>
-            <Path fileType="library">/usr/lib64/libmidori-core.so.1</Path>
-            <Path fileType="library">/usr/lib64/midori/libabout.so</Path>
+            <Path fileType="library">/usr/lib64/girepository-1.0/Midori-0.6.typelib</Path>
+            <Path fileType="library">/usr/lib64/libmidori-core.so</Path>
+            <Path fileType="library">/usr/lib64/libmidori-core.so.0</Path>
+            <Path fileType="library">/usr/lib64/libmidori-core.so.0.6</Path>
+            <Path fileType="library">/usr/lib64/midori/adblock.plugin</Path>
+            <Path fileType="library">/usr/lib64/midori/bookmarks.plugin</Path>
+            <Path fileType="library">/usr/lib64/midori/colorful-tabs.plugin</Path>
+            <Path fileType="library">/usr/lib64/midori/libactivatable.so</Path>
             <Path fileType="library">/usr/lib64/midori/libadblock.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libapps.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libbookmarks.so</Path>
             <Path fileType="library">/usr/lib64/midori/libcolorful-tabs.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libcookie-manager.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libcopy-tabs.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libdelayed-load.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libdevpet.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libdomain-keys.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libfeed-panel.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libflummi.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libhistory-list.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libmouse-gestures.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libnotes.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libopen-with.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libshortcuts.so</Path>
+            <Path fileType="library">/usr/lib64/midori/libsession.so</Path>
             <Path fileType="library">/usr/lib64/midori/libstatus-clock.so</Path>
             <Path fileType="library">/usr/lib64/midori/libstatusbar-features.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libtab-panel.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libtabby.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libtabs-minimized.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libtoolbar-editor.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libtransfers.so</Path>
-            <Path fileType="library">/usr/lib64/midori/libwebmedia-now-playing.so</Path>
+            <Path fileType="library">/usr/lib64/midori/session.plugin</Path>
+            <Path fileType="library">/usr/lib64/midori/status-clock.plugin</Path>
+            <Path fileType="library">/usr/lib64/midori/statusbar-features.plugin</Path>
             <Path fileType="data">/usr/share/appdata/midori.appdata.xml</Path>
-            <Path fileType="data">/usr/share/applications/midori-private.desktop</Path>
-            <Path fileType="data">/usr/share/applications/midori.desktop</Path>
-            <Path fileType="doc">/usr/share/doc/midori/AUTHORS</Path>
+            <Path fileType="data">/usr/share/applications/org.midori_browser.Midori.desktop</Path>
             <Path fileType="doc">/usr/share/doc/midori/COPYING</Path>
-            <Path fileType="doc">/usr/share/doc/midori/ChangeLog</Path>
-            <Path fileType="doc">/usr/share/doc/midori/EXPAT</Path>
-            <Path fileType="doc">/usr/share/doc/midori/README</Path>
-            <Path fileType="doc">/usr/share/doc/midori/faq.css</Path>
-            <Path fileType="doc">/usr/share/doc/midori/faq.html</Path>
+            <Path fileType="doc">/usr/share/doc/midori/README.md</Path>
+            <Path fileType="data">/usr/share/gir-1.0/Midori-0.6.gir</Path>
             <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/midori.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/16x16/categories/extension.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/16x16/status/internet-news-reader.png</Path>
             <Path fileType="data">/usr/share/icons/hicolor/22x22/apps/midori.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/22x22/categories/extension.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/22x22/status/internet-news-reader.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/24x24/status/adblock-blocked.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/24x24/status/adblock-disabled.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/24x24/status/adblock-enabled.svg</Path>
             <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/midori.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/scalable/categories/extension.svg</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/scalable/status/internet-news-reader.svg</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ast/LC_MESSAGES/midori.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/az/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/be/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bg/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/bn/LC_MESSAGES/midori.mo</Path>
@@ -133,9 +109,11 @@
             <Path fileType="localedata">/usr/share/locale/sr/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sr@latin/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/sv/LC_MESSAGES/midori.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/szl/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ta/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/te/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/th/LC_MESSAGES/midori.mo</Path>
+            <Path fileType="localedata">/usr/share/locale/tl/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/tr/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ug/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/uk/LC_MESSAGES/midori.mo</Path>
@@ -145,46 +123,12 @@
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/midori.mo</Path>
-            <Path fileType="data">/usr/share/midori/res/about.css</Path>
-            <Path fileType="data">/usr/share/midori/res/adblock.list</Path>
-            <Path fileType="data">/usr/share/midori/res/adblock/element_hider.js</Path>
-            <Path fileType="data">/usr/share/midori/res/autosuggestcontrol.css</Path>
-            <Path fileType="data">/usr/share/midori/res/autosuggestcontrol.js</Path>
-            <Path fileType="data">/usr/share/midori/res/bookmarks/Create.sql</Path>
-            <Path fileType="data">/usr/share/midori/res/bookmarks/Import_old_db_bookmarks.sql</Path>
-            <Path fileType="data">/usr/share/midori/res/error.html</Path>
-            <Path fileType="data">/usr/share/midori/res/flummi/Create.sql</Path>
-            <Path fileType="data">/usr/share/midori/res/forms/Create.sql</Path>
-            <Path fileType="data">/usr/share/midori/res/gtk3.css</Path>
-            <Path fileType="data">/usr/share/midori/res/history/Create.sql</Path>
-            <Path fileType="data">/usr/share/midori/res/history/Day.sql</Path>
-            <Path fileType="data">/usr/share/midori/res/logo-shade.png</Path>
-            <Path fileType="data">/usr/share/midori/res/nojs/nojs-statusicon-allowed.png</Path>
-            <Path fileType="data">/usr/share/midori/res/nojs/nojs-statusicon-denied.png</Path>
-            <Path fileType="data">/usr/share/midori/res/nojs/nojs-statusicon-mixed.png</Path>
-            <Path fileType="data">/usr/share/midori/res/notes/Create.sql</Path>
-            <Path fileType="data">/usr/share/midori/res/speeddial-head.html</Path>
-            <Path fileType="data">/usr/share/midori/res/tabby/Create.sql</Path>
-            <Path fileType="data">/usr/share/midori/res/tabby/Update1.sql</Path>
-        </Files>
-    </Package>
-    <Package>
-        <Name>midori-devel</Name>
-        <Summary xml:lang="en">Development files for midori</Summary>
-        <Description xml:lang="en">Midori is a lightweight GTK+ web browser based on WebkitGtk. It features tabs, windows and session management, bookmarks stored with XBEL, searchbox based on OpenSearch, and user script support
-</Description>
-        <PartOf>programming.devel</PartOf>
-        <RuntimeDependencies>
-            <Dependency release="14">midori</Dependency>
-        </RuntimeDependencies>
-        <Files>
-            <Path fileType="library">/usr/lib64/libmidori-core.so</Path>
         </Files>
     </Package>
     <History>
-        <Update release="14">
-            <Date>2018-06-23</Date>
-            <Version>0.5.11</Version>
+        <Update release="15">
+            <Date>2018-12-19</Date>
+            <Version>7.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joey Riches</Name>
             <Email>josephriches@gmail.com</Email>

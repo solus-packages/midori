@@ -1,29 +1,32 @@
 name       : midori
-version    : 0.5.11
-release    : 14
+version    : '7.0'
+release    : 15
 source     :
-    - http://midori-browser.org/downloads/midori_0.5.11_all_.tar.bz2 : 96191a96be71144ae848a409fae5a1d6d52a00e583f33122081f47ead9c49c3d
-license    : GPL-2.0-only
+    - https://github.com/midori-browser/core/releases/download/v7/midori-v7.0.tar.gz : 905b2cf721f1dbfbee974c56b328870f462bd68c1dd27dc6890ce852aeb4cd39
+license    : LGPL-2.1-or-later
 component  : network.web.browser
-summary    : Lightweight web browser GTK+ based
+summary    : Midori Web Browser - a lightweight, fast and free web browser using WebKit and GTK+
 description: |
     Midori is a lightweight GTK+ web browser based on WebkitGtk. It features tabs, windows and session management, bookmarks stored with XBEL, searchbox based on OpenSearch, and user script support
+libsplit   : no
 builddeps  :
     - pkgconfig(gcr-3)
-    - pkgconfig(granite)
-    - pkgconfig(librsvg-2.0)
-    - pkgconfig(libsoup-gnome-2.4)
+    - pkgconfig(gstreamer-1.0)
+    - pkgconfig(gstreamer-bad-video-1.0)
+    - pkgconfig(libpeas-gtk-1.0)
     - pkgconfig(sqlite3)
     - pkgconfig(webkit2gtk-4.0)
-    - pkgconfig(zeitgeist-2.0)
+    - xorg-server-xvfb
     - vala
 rundeps    :
-    - glib-networking
+    - gstreamer-1.0-libav
+    - gstreamer-1.0-plugins-bad
+    - gstreamer-1.0-plugins-good
 setup      : |
-    %patch -p0 < $pkgfiles/fix-build-with-valac-0.35.x.patch
-    %patch -p1 < $pkgfiles/0001-Change-default-homepage-to-about-speed-as-DDG-can-be.patch
-    %cmake -DHALF_BRO_INCOM_WEBKIT2=ON -DUSE_GRANITE=TRUE
+    %cmake_ninja
 build      : |
-    %make
+    %ninja_build
 install    : |
-    %make_install
+    %ninja_install
+check      : |
+    xvfb-run %ninja_check
