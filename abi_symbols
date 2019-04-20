@@ -22,6 +22,7 @@ libmidori-core.so.0:midori_browser_add
 libmidori-core.so.0:midori_browser_add_button
 libmidori-core.so.0:midori_browser_construct
 libmidori-core.so.0:midori_browser_construct_incognito
+libmidori-core.so.0:midori_browser_get_idle
 libmidori-core.so.0:midori_browser_get_is_fullscreen
 libmidori-core.so.0:midori_browser_get_is_loading
 libmidori-core.so.0:midori_browser_get_is_locked
@@ -31,8 +32,11 @@ libmidori-core.so.0:midori_browser_get_trash
 libmidori-core.so.0:midori_browser_get_type
 libmidori-core.so.0:midori_browser_get_uri
 libmidori-core.so.0:midori_browser_get_web_context
+libmidori-core.so.0:midori_browser_get_zoom_level
 libmidori-core.so.0:midori_browser_new
 libmidori-core.so.0:midori_browser_new_incognito
+libmidori-core.so.0:midori_browser_prompt
+libmidori-core.so.0:midori_browser_set_idle
 libmidori-core.so.0:midori_browser_set_is_fullscreen
 libmidori-core.so.0:midori_browser_set_is_loading
 libmidori-core.so.0:midori_browser_set_is_locked
@@ -41,6 +45,7 @@ libmidori-core.so.0:midori_browser_set_tab
 libmidori-core.so.0:midori_browser_set_trash
 libmidori-core.so.0:midori_browser_set_uri
 libmidori-core.so.0:midori_browser_set_web_context
+libmidori-core.so.0:midori_browser_set_zoom_level
 libmidori-core.so.0:midori_clear_private_data_activatable_activate
 libmidori-core.so.0:midori_clear_private_data_activatable_clear
 libmidori-core.so.0:midori_clear_private_data_activatable_clear_finish
@@ -299,6 +304,7 @@ libmidori-core.so.0:midori_tab_get_link_uri
 libmidori-core.so.0:midori_tab_get_pinned
 libmidori-core.so.0:midori_tab_get_progress
 libmidori-core.so.0:midori_tab_get_secure
+libmidori-core.so.0:midori_tab_get_tls
 libmidori-core.so.0:midori_tab_get_type
 libmidori-core.so.0:midori_tab_new
 libmidori-core.so.0:midori_tab_set_can_go_back
@@ -311,6 +317,7 @@ libmidori-core.so.0:midori_tab_set_link_uri
 libmidori-core.so.0:midori_tab_set_pinned
 libmidori-core.so.0:midori_tab_set_progress
 libmidori-core.so.0:midori_tab_set_secure
+libmidori-core.so.0:midori_tab_set_tls
 libmidori-core.so.0:midori_tally_construct
 libmidori-core.so.0:midori_tally_get_active
 libmidori-core.so.0:midori_tally_get_show_close
@@ -326,6 +333,7 @@ libmidori-core.so.0:midori_tally_set_title
 libmidori-core.so.0:midori_tally_set_uri
 libmidori-core.so.0:midori_urlbar_construct
 libmidori-core.so.0:midori_urlbar_create_row
+libmidori-core.so.0:midori_urlbar_get_blank
 libmidori-core.so.0:midori_urlbar_get_key
 libmidori-core.so.0:midori_urlbar_get_location
 libmidori-core.so.0:midori_urlbar_get_regex

@@ -1,8 +1,8 @@
 name       : midori
-version    : '7.0'
-release    : 15
+version    : '8.0'
+release    : 16
 source     :
-    - https://github.com/midori-browser/core/releases/download/v7/midori-v7.0.tar.gz : 905b2cf721f1dbfbee974c56b328870f462bd68c1dd27dc6890ce852aeb4cd39
+    - https://github.com/midori-browser/core/releases/download/v8.0/midori-v8.0.tar.gz : 559ec7cc8903a423958f660f6ffb29f30e9e357b85c19ecd296e8911dc92be3c
 license    : LGPL-2.1-or-later
 component  : network.web.browser
 summary    : Midori Web Browser - a lightweight, fast and free web browser using WebKit and GTK+
@@ -13,6 +13,8 @@ builddeps  :
     - pkgconfig(gcr-3)
     - pkgconfig(gstreamer-1.0)
     - pkgconfig(gstreamer-bad-video-1.0)
+    - pkgconfig(json-glib-1.0)
+    - pkgconfig(libarchive)
     - pkgconfig(libpeas-gtk-1.0)
     - pkgconfig(sqlite3)
     - pkgconfig(webkit2gtk-4.0)
