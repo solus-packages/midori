@@ -20,6 +20,7 @@ libmidori-core.so.0:midori_browser_activatable_get_type
 libmidori-core.so.0:midori_browser_activatable_set_browser
 libmidori-core.so.0:midori_browser_add
 libmidori-core.so.0:midori_browser_add_button
+libmidori-core.so.0:midori_browser_add_panel
 libmidori-core.so.0:midori_browser_construct
 libmidori-core.so.0:midori_browser_construct_incognito
 libmidori-core.so.0:midori_browser_get_idle
@@ -212,6 +213,7 @@ libmidori-core.so.0:midori_favicon_construct
 libmidori-core.so.0:midori_favicon_get_type
 libmidori-core.so.0:midori_favicon_get_uri
 libmidori-core.so.0:midori_favicon_new
+libmidori-core.so.0:midori_favicon_set_surface
 libmidori-core.so.0:midori_favicon_set_uri
 libmidori-core.so.0:midori_history_database_get_default
 libmidori-core.so.0:midori_history_database_get_type

@@ -43,9 +43,9 @@
             <Path fileType="doc">/usr/share/doc/midori/COPYING</Path>
             <Path fileType="doc">/usr/share/doc/midori/README.md</Path>
             <Path fileType="data">/usr/share/gir-1.0/Midori-0.6.gir</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/midori.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/22x22/apps/midori.png</Path>
-            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/midori.svg</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/16x16/apps/org.midori_browser.Midori.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/22x22/apps/org.midori_browser.Midori.png</Path>
+            <Path fileType="data">/usr/share/icons/hicolor/scalable/apps/org.midori_browser.Midori.svg</Path>
             <Path fileType="localedata">/usr/share/locale/af/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/am/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/ar/LC_MESSAGES/midori.mo</Path>
@@ -124,13 +124,13 @@
             <Path fileType="localedata">/usr/share/locale/zh_CN/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_HK/LC_MESSAGES/midori.mo</Path>
             <Path fileType="localedata">/usr/share/locale/zh_TW/LC_MESSAGES/midori.mo</Path>
-            <Path fileType="data">/usr/share/metainfo/midori.appdata.xml</Path>
+            <Path fileType="data">/usr/share/metainfo/org.midori_browser.Midori.appdata.xml</Path>
         </Files>
     </Package>
     <History>
-        <Update release="16">
-            <Date>2019-04-20</Date>
-            <Version>8.0</Version>
+        <Update release="17">
+            <Date>2019-09-21</Date>
+            <Version>9.0</Version>
             <Comment>Packaging update</Comment>
             <Name>Joshua Strobl</Name>
             <Email>joshua@stroblindustries.com</Email>
